@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/stalwart.css">
+    <link rel="stylesheet" href="/css/loading.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Abril+Fatface&family=Cormorant+Garamond&family=Tajawal&family=Headland+One&family=Rufina:wght@700&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+   
+    <title>StalWart</title>
+</head>
+        <link rel = "icon" href ="/images/stalwart-logo.png" type = "image/x-icon"> 
+<body onload="load()">
+
+<div class="loading">
+    <span class="bder"></span>
+    <span class="bder"></span>
+</div>
+
+<nav class="navbar navbar-expand-lg navbar-light sticky-top navbar-inner">
+        <a class="navbar-brand" href="/"><img src="/images/stalwart-logo.png" width="40" height="40" alt=""> </a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon "></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link " href="/create-event">Host Events</a>
+        </li>
+        <li class="nav-item active">
+            <a class="nav-link" href="/all-events">All Events</a>
+          </li>
+          <li class="nav-item active sign-in">
+            <a class="nav-link" href="/login">Sign In <span class="e" >{{error}}</span></a>
+          </li>      
+           <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+         <img id="dp1" style="width: 30px; height:30px; border-radius:50%  " src="https://www.tenforums.com/geek/gars/images/2/types/thumb__ser.png" alt="">
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="/profile/{{id}}">My Profile</a>
+          <a class="dropdown-item" href="/profile/{{id}}/change-email">Change Email</a>  
+          <a class="dropdown-item" href="/profile/{{id}}/change-password" >Change Password</a>
+          <a class="dropdown-item" href="#" data-toggle="modal" data-target="#exampleModal1">Log Out</a>
+        </div>
+      </li>                 
+      </ul>
+    </div>
+  </nav>
+
+
+
+
+
+
+
+
+<div class="bckg">
+  <!-- <div class="txt">
+    Welcome to StalWart Esports
+  </div> -->
+</div>
+<div class="angled"></div>
+ 
+<div class="intro">
+<p>
+    <!-- StarlWart is a full service event management firm based in Delhi,NCR that was created by pairing together our passion for business and events. We bring a fresh, unique approach to the event management industry. </p><p>
+Our team understands that a properly executed event can be leveraged to support an organization’s strategic vision, incorporated into a company’s marketing plan,
+or used to build networks and client loyalty. -->
+Stalwart Esports is an organisation where professional Gamers are curated! Play beyond reality.
+</p> 
+
+</div>
+<div class="expect">
+<div class="msg">
+  Exceeding Gaming Experience
+</div>
+</div>
+
+
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>    
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item item1 active">
+      
+    </div>
+    <div class="carousel-item item2">
+      
+    </div>
+    <div class="carousel-item item3">
+      
+    </div>
+    <div class="carousel-item item4">
+      
+    </div>
+    <div class="carousel-item item5">
+      
+    </div>
+        <div class="carousel-item item6">
+      
+    </div>
+  </div>
+  <a class="carousel-control-prev " href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon bg-dark" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon bg-dark" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+<div class="signup">
+<img src="/images/stalwart-logo.png" alt="">
+
+<div class="content">
+<h2>Stay Tuned For Latest</h2> <h2> Updates</h2>
+<h3>Become a member of our StalWart Family</h3>
+<a href="/signup"><button type="button" class="btn btn-lg btn-outline-success">Sign UP</button></a>
+</div>
+
+</div>
+
+
+<div class="container">
+  <div class="events" style="border: 1px  black; height: 40px;">
+    <div class="featured">
+      Featured Events 
+     </div>
+  </div>
+</div>
+<div class="row">
+          <div class="col-12 mt-3 ">
+            <div class="card">
+                <div class="card-horizontal">
+                    <div class="img-square-wrapper">
+                        <img class="" src="http://via.placeholder.com/300x180" alt="Card image cap">
+                    </div>
+                    <div class="card-body">
+                        <h4 class="card-title">Card title</h4>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+                <div class="col-12 mt-3">
+            <div class="card">
+                <div class="card-horizontal">
+                    <div class="img-square-wrapper">
+                        <img class="" src="http://via.placeholder.com/300x180" alt="Card image cap">
+                    </div>
+                    <div class="card-body">
+                        <h4 class="card-title">Card title</h4>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+  </div>
+  <div class="container">
+  <div class="events" style="border: 1px  black;">
+  <div class="nothing">
+
+     <h2>No Events Found!!</h2>
+     <h2><a href="/create-event">Click to create an event!</a></h2>
+  </div>
+     <div class="view">
+      <a href="/all-events">View All
+       <i class="fas fa-angle-double-right"></i></a> 
+      </div>
+  </div>
+</div>
+<div class="mt-5 pt-3 pb-1 footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-5 col-sm-12 about-company">
+        <h2>Connect With Us</h2>
+        <p class="pr-5 text-white-50">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac ante mollis quam tristique convallis </p>
+        <p><a href="#"><i class="fab fa-facebook-square mr-1"></i></a><a href="#"><i class="fab fa-linkedin"></i></a></p>
+      </div>
+      <div class="col-lg-3 col-sm-6 col-6 links">
+        <h4 class="mt-lg-0 mt-sm-3">Legal</h4>
+          <ul class="m-0 p-0">
+            <li>- <a href="#">Terms of Service</a></li>
+            <li>- <a href="#">Cancellation</a></li>
+            <li>- <a href="#">Privacy Policy</a></li>
+          </ul>
+      </div>
+      <div class="col-lg-4 col-sm-6 col-6 location">
+        <h4 class="mt-lg-0 mt-sm-4">Location</h4>
+        <p>22, Lorem ipsum dolor, consectetur adipiscing</p>
+        <p class="mb-0"><i class="fa fa-phone mr-3"></i>(541) 754-3010</p>
+        <p><i class="fa fa-envelope mr-3"></i>info@hsdf.com</p>
+      </div>
+    </div>
+    <div class="row mt-1">
+      <div class="col copyright">
+        <p class=""><small class="text-white-50">© 2020. All Rights Reserved.</small></p>
+      </div>
+    </div>
+  </div>
+  </div>
+  <div class="modal fade edit" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Edit Profile</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+                 <form action="/users/edit" method="POST">
+            <div class="form-group">
+               <label >Bio</label>
+              <input name="Bio" type="text" class="form-control" placeholder="" >
+              </div>      
+              <div class="form-group">
+               <label >Occupation</label>
+              <input name="Occupation" type="text" class="form-control" placeholder="" >
+              </div>
+              <div class="form-group">
+                  <label >City</label>
+                 <input name="City" type="text" class="form-control" placeholder="" >
+                 </div>
+                 <div class="form-group">
+                  <label >BirthDate</label>
+                 <input name="BirthDate" type="date" class="form-control" placeholder="">
+                 </div>       
+              <div class="form-group">
+                  <label >Mobile Number</label>
+                 <input name="Mobile" type="text" maxlength="10" class="form-control" placeholder="" required pattern="[1-9]{1}[0-9]{9}" title="Must be a valid mobile number">
+                 </div> 
+                 <div class="modal-footer">
+                          <button type="submit" class="btn btn-outline-success ">Save Changes</button>
+                              <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+               </div>
+        
+  
+                  </form>
+                  </div>
+        </div>
+      </div>
+    </div>
+  
+  <div class="modal fade edit" id="exampleModal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Change Password</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+                 <form class="qw" method="GET">
+             <div class="form-group">
+            <label for="exampleInputPassword1" class="qw1">Old Password</label>
+            <input name="oldPassword" type="password" class="form-control" id="exampleInputPassword1" placeholder="Password"  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required title="Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters" placeholder="Password">
+             <div class="errorOld text-danger"></div>
+          </div>
+              <div class="form-group">
+            <label for="exampleInputPassword2">Password</label>
+            <input name="password" type="password" class="form-control" id="exampleInputPassword2" placeholder="Password"  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required title="Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters" placeholder="Password">
+          </div>
+          <div class="form-group">
+              <label for="exampleInputPassword3">Retype-Password</label>
+              <input  type="password" class="form-control" id="exampleInputPassword3" oninput="check(this)" placeholder="Password" required >
+             <div class="succ text-success "></div>
+           
+            </div>
+                 <div class="modal-footer">
+                          <button type="submit "   class="btn btn-outline-success ">Save Changes</button>
+                              <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+               </div>
+        
+  
+                  </form>
+                  </div>
+        </div>
+      </div>
+    </div>
+  
+  
+    <!-- Small modal -->
+  
+  
+  <div class="modal fade logout" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel1" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+  
+        <div class="modal-body">
+                    <p> Are you sure you want to log-out?</p>       
+          <form action="/user/logout" method="POST">
+                 <div class="modal-footer">
+                   <button type="submit" class="btn btn-outline-success ">Logout</button>
+                  <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+               </div>
+        </form>
+  
+                  </div>
+        </div>
+      </div>
+    </div>
+<script src="/js/loading.js"></script>
+<script src="/js/stalwart.js"></script>
+</body>
+</html>

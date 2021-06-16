@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/css/bootstrap.css">
+        <link rel="stylesheet" href="/css/loading.css">
+    <link rel="stylesheet" href="/css/stalwart.css">
+        <link rel="stylesheet" href="/css/all-events.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Abril+Fatface&family=Cormorant+Garamond&family=Tajawal&family=Headland+One&family=Rufina:wght@700&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Montserrat&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <title>All Events</title>
+</head>
+<link rel = "icon" href ="/images/stalwart-logo.png" type = "image/x-icon">
+<body onload="load()">
+  <div class="loading">
+    <span class="bder"></span>
+    <span class="bder"></span>
+</div>
+<nav class="navbar navbar-expand-lg navbar-light sticky-top navbar-inner">
+        <a class="navbar-brand" href="/"><img src="/images/stalwart-logo.png" width="40" height="40" alt=""> </a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon "></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link " href="/create-event">Host Events</a>
+        </li>
+        <li class="nav-item active">
+            <a class="nav-link" href="/all-events">All Events</a>
+          </li>
+          <li class="nav-item active sign-in">
+            <a class="nav-link" href="/login">Sign In <span class="e" >{{error}}</span></a>
+          </li>      
+           <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+ <img id="dp1" style="width: 30px; height:30px; border-radius:50%  " src="https://www.tenforums.com/geek/gars/images/2/types/thumb__ser.png" alt="">
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="/profile/{{id}}">My Profile</a>
+          <a class="dropdown-item" href="/profile/{{id}}/change-email">Change Email</a>          
+          <a class="dropdown-item" href="/profile/{{id}}/change-password" >Change Password</a>
+          <a class="dropdown-item" href="#" data-toggle="modal" data-target="#exampleModal1">Log Out</a>
+        </div>
+      </li>                 
+      </ul>
+    </div>
+  </nav>
+<div class="cont1">
+    <div id="carouselContent" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner" role="listbox">
+            <div class="carousel-item active text-center p-4">
+              <i class="fas fa-quote-left"></i>
+                 <p>You may not like video games, But what I learned from them is this: no enemies in front of them means that you are going in the wrong way.</p>
+           <div class="brdr"></div>
+          <div class="auth"> Anonymous</div>
+          <div class="auth1 text-secondary"> A Call of Duty player</div>
+            </div>
+            <div class="carousel-item text-center p-4">
+              <i class="fas fa-quote-left"></i>
+                <p>When I was a young man, I had a liberty, But I did not see it. I had time, But I did not know it. And I had love, But I did not feel it.</p>
+                       <div class="brdr"></div>
+          <div class="auth">Ezio Audiotore Da Firenze</div>
+          <div class="auth1 text-secondary">Assassin's Creed Revelations Protagonist</div>
+            </div>
+                   <div class="carousel-item text-center p-4">
+                     <i class="fas fa-quote-left"></i>
+                <p>Life is a video game. No matter How good you get, you are always zapped in the end.</p>
+            <div class="brdr"></div>
+          <div class="auth">John Updike</div>
+          <div class="auth1 text-secondary">American Novelist</div>
+            </div>
+                        <div class="carousel-item text-center p-4">
+                          <i class="fas fa-quote-left"></i>
+                <p>I know not with what weapons World War III will be fought, but World War IV will be fought with sticks and stones</p>
+                      <div class="brdr"></div>
+          <div class="auth">Albert Einstein</div>
+          <div class="auth1 text-secondary">Quote featured in Call of Duty Modern Warfare II</div>
+            </div>     
+                                    <div class="carousel-item text-center p-4">
+                                      <i class="fas fa-quote-left"></i>
+                <p>This was not the way I imagined my life would be. I dreamt of a life of Cars, Women, Money, Respect, Freedom. I guess I ended up having all of that. But along with it came Prison. Living with constant fear and blood of my friends. I ducked it as long as I could. But it was finally catching up with me. It was all just a matter of time.</p>
+                     <div class="brdr"></div>
+          <div class="auth">Vito Scalleta</div>
+          <div class="auth1 text-secondary">Mafia II Protagonist</div>
+            </div> 
+               <div class="carousel-item text-center p-4">
+                 <i class="fas fa-quote-left"></i>
+                <p>Life is a like a video game, With different stages or levels, again and again you will face 'GAME OVER'. All you have to do is to upgrade your skills with earned points, and try again and again..</p>
+                       <div class="brdr"></div>
+          <div class="auth">Kartikey D Pandey</div>
+          <div class="auth1 text-secondary">An Anonymous Gamer</div>
+            </div>    
+        </div>
+        <a class="carousel-control-prev" href="#carouselContent" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselContent" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+    
+</div>
+
+   <div class="container">
+  <div class="events" style="border: 1px  black; height: 40px;">
+    <div class="featured">
+      Featured Events 
+     </div>
+  </div>
+</div>
+<div class="container" id="container1" >
+  <div class="card">
+    <img src="http://mistillas.cl/wp-content/uploads/2018/04/Nike-Epic-React-Flyknit-%E2%80%9CPearl-Pink%E2%80%9D-01.jpg" />
+  <div class="product">
+    <h1>Nike Epic React Flyknit</h1>
+    <h2>$150</h2>
+    <p class="desc">The Nike Epic React Flyknit foam cushioning is responsive yet light-weight....</p>
+    <div class="buttons">
+      <button class="add">Register</button>
+    </div>
+  </div>
+</div>
+  </div>
+  <div class="container">
+  <div class="events" style="border: 1px  black;">
+  <div class="nothing">
+
+     <h2>No Events Found!!</h2>
+     <h2><a href="/create-event">Click to create an event!</a></h2>
+  </div>
+  </div>
+</div>
+   <div style="clear:both;"></div> 
+    <div class="pages">
+       <a class="pr" href="">Prev</a>
+       <a class="fr" href="">1</a>
+       <a class="se" href="">2</a>
+       <a class="th" href="">3</a>
+       <a class="fo" href="">4</a>
+       <a class="fi" href="">5</a>
+       <a class="nxt" href="">Next</a>
+
+    </div>
+               <div class="home">
+
+            <i class="fas fa-long-arrow-alt-left"></i> <a href="/">Back to Home</a>
+          </div>    
+   <div class="mt-5 pt-3 pb-1 footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-5 col-xs-12 about-company">
+        <h2>Connect With Us</h2>
+        <p class="pr-5 text-white-50">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac ante mollis quam tristique convallis </p>
+        <p><a href="#"><i class="fab fa-facebook-square mr-1"></i></a><a href="#"><i class="fab fa-linkedin"></i></a></p>
+      </div>
+      <div class="col-lg-3 col-sm-6 col-6 links">
+        <h4 class="mt-lg-0 mt-sm-3">Legal</h4>
+          <ul class="m-0 p-0">
+            <li>- <a href="#">Terms of Service</a></li>
+            <li>- <a href="#">Cancellation</a></li>
+            <li>- <a href="#">Privacy Policy</a></li>
+          </ul>
+      </div>
+      <div class="col-lg-4 col-sm-6 col-6 location">
+        <h4 class="mt-lg-0 mt-sm-4">Location</h4>
+        <p>22, Lorem ipsum dolor, consectetur adipiscing</p>
+        <p class="mb-0"><i class="fa fa-phone mr-3"></i>(541) 754-3010</p>
+        <p><i class="fa fa-envelope mr-3"></i>info@hsdf.com</p>
+      </div>
+    </div>
+    <div class="row mt-1">
+      <div class="col copyright">
+        <p class=""><small class="text-white-50">© 2020. All Rights Reserved.</small></p>
+      </div>
+    </div>
+  </div>
+  </div>    
+  <div class="modal fade logout" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel1" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+
+      <div class="modal-body">
+        <form action="/user/logout" method="POST">
+               <div class="modal-footer">
+                <p> Are you sure you want to log-out?</p>
+                <br>
+                 <button type="submit" class="btn btn-outline-success ">Logout</button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+             </div>
+        </form>
+
+                </div>
+      </div>
+    </div>
+  </div>  
+ <script src="/js/loading.js"></script>
+<script src="/js/all-events.js"></script>
+
+</body>
+</html>

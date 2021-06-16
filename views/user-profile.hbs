@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stalwart|Profile|{{name}}</title>
+</head>
+<link rel = "icon" href ="/images/stalwart-logo.png" type = "image/x-icon">
+<link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/loading.css">
+<link rel="stylesheet" href="/css/user-profile.css">
+<link rel="stylesheet" href="/css/stalwart.css">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/@icon/entypo@1.0.3/entypo.css" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Abril+Fatface&family=Cormorant+Garamond&family=Tajawal&family=Headland+One&family=Rufina:wght@700&display=swap" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+<body onload="load()">
+    <div class="loading">
+    <span class="bder"></span>
+    <span class="bder"></span>
+</div>
+      <nav class="navbar navbar-expand-lg navbar-light sticky-top navbar-inner">
+        <a class="navbar-brand" href="/"><img src="/images/stalwart-logo.png" width="40" height="40" alt=""> </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon "></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link " href="/create-event">Host Events</a>
+            </li>
+                    <li class="nav-item active">
+            <a class="nav-link" href="/all-events">All Events</a>
+          </li>
+          <li class="nav-item active sign-in">
+            <a class="nav-link" href="/login">Sign In <span class="e" >{{error}}</span></a>
+          </li>      
+           <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+ <img id="dp1" style="width: 30px; height:30px; border-radius:50%  " src="https://www.tenforums.com/geek/gars/images/2/types/thumb__ser.png" alt="">
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="{{id}}/edit-profile" id="edit">Edit Profile</a>
+          <a class="dropdown-item" href="{{id}}/change-email">Change Email</a>          
+          <a class="dropdown-item" href="{{id}}/change-password">Change Password</a>
+          <a class="dropdown-item" href="#" data-toggle="modal" data-target="#exampleModal1">Log Out</a>
+        </div>
+      </li>           
+          </ul>
+        </div>
+      </nav>
+<div class="first">
+ <div class="image" >
+<img id="dp" src="https://www.tenforums.com/geek/gars/images/2/types/thumb__ser.png" alt="">
+<div class="middle">
+    <a href="#" data-toggle="modal" data-target="#exampleModal2"><i class="fas fa-camera"></i></a>
+  </div>
+ </div>
+<div class="text"><h4>{{name}}</h4>
+<div class="loc"><i class="fas fa-map-marker-alt"></i> <span id="city" >{{City}}</span></div>
+<p>{{Bio}}</p>
+
+</div>
+</div>
+<div class="second">
+<div class="personal-info"> Personal Information  <a href="{{id}}/edit-profile" class="edit-pr1">(edit-profile)</a>
+<div><i class="far fa-envelope "></i><span class="info email-info">{{email}}</span></div>
+<div><i class="fas fa-mobile "></i><span class="info">   {{Mobile}}</span></div>
+<div><i class="fas fa-birthday-cake"></i><span class="info">{{BirthDate}}</span></div>
+<div></div>
+
+</div>
+</div>
+<div class="third ">
+    <h4 class="text-left pb-2">Registered Events</h4>
+      <div class="nothing" id="nothing1" style="margin-top: 10vh;">
+
+     <h2>No Events Found!!</h2>
+     <h2><a href="/all-events">Click to register in an event!</a></h2>
+  </div>
+    <table class="table">
+    <thead id="th1">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Date</th>
+        <th scope="col">Event Game</th>
+      </tr>
+    </thead>
+    <tbody class="table1">
+      <tr>
+        <th scope="row">1</th>
+        <td>Mark</td>
+        <td>Pubg Quarantine Gameplay dsfsfsdf
+            sfs
+            df
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td>Jacob</td>
+        <td>@fat</td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td>Larry</td>
+        <td>@twitter</td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
+<div class="fourth ">
+    <h4 class="text-left pb-2">Created Events</h4>
+     <div class="nothing" id="nothing2" style=" margin-top:10vh ">
+
+     <h2>No Events Found!!</h2>
+     <h2><a href="/create-event">Click to create an event!</a></h2>
+  </div>
+    <table class="table">
+    <thead id="th2">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Date</th>
+        <th scope="col">Event Game</th>
+      </tr>
+    </thead>
+    <tbody class="table2">
+      <tr>
+        <th scope="row">1</th>
+        <td>Mark</td>
+        <td>Pubg Quarantine Gameplay dsfsfsdf
+            sfs
+            df
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td>Jacob</td>
+        <td>@fat</td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td>Larry</td>
+        <td>@twitter</td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
+  <div class="modal fade edit" id="exampleModal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Change Password</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+                 <form class="qw" method="GET">
+             <div class="form-group">
+            <label for="exampleInputPassword1" class="qw1">Old Password</label>
+            <input name="oldPassword" type="password" class="form-control" id="exampleInputPassword1" placeholder="Password"  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required title="Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters" placeholder="Password">
+             <div class="errorOld text-danger"></div>
+          </div>
+              <div class="form-group">
+            <label for="exampleInputPassword2">Password</label>
+            <input name="password" type="password" class="form-control" id="exampleInputPassword2" placeholder="Password"  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required title="Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters" placeholder="Password">
+          </div>
+          <div class="form-group">
+              <label for="exampleInputPassword3">Retype-Password</label>
+              <input  type="password" class="form-control" id="exampleInputPassword3" oninput="check(this)" placeholder="Password" required >
+             <div class="succ text-success "></div>
+           
+            </div>
+                 <div class="modal-footer">
+                          <button type="submit "   class="btn btn-outline-success ">Save Changes</button>
+                              <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+               </div>
+        
+  
+                  </form>
+                  </div>
+        </div>
+      </div>
+    </div>
+  
+  
+    <!-- Small modal -->
+  
+  
+  <div class="modal fade logout" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel1" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+  
+        <div class="modal-body">
+                            <p> Are you sure you want to log-out?</p>
+          <form action="/user/logout" method="POST">
+                 <div class="modal-footer">
+                   <button type="submit" class="btn btn-outline-success ">Logout</button>
+                  <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+               </div>
+        </form>
+  
+                  </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade edit-profile" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel2" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+  
+        <div class="modal-body">
+         <form action="/users/avatar"  enctype="multipart/form-data" onsubmit="checkextension()" method="POST">
+                 <div class="modal-footer">
+                    <div class="form-group">
+      <label for="exampleFormControlFile1">Upload Profile Picture</label>
+      <input type="file" name="avatar" class="form-control-file" id="exampleFormControlFile1" accept="image/x-png,image/gif,image/jpeg,image/jpg" onchange="checkextension()" required>
+    </div>  
+                   <button type="submit" class="btn btn-outline-success ">Save</button>
+                  <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+               </div>
+        </form>
+  
+                  </div>
+        </div>
+      </div>
+    </div>
+<script src="/js/loading.js"></script>
+<script src="/js/user-profile.js"></script>
+</body>
+</html>

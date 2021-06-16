@@ -1,0 +1,664 @@
+
+        body{
+            width: 100%;
+            height: 100%;
+            
+   
+        }
+        /* .container {
+            height: 100%;
+        } */
+        .row{
+            height: 100%;
+            margin-top: 5px;
+            padding: 2.5% 2.5%;
+            width: 100%;
+            align-items: center;
+        }
+
+
+
+
+
+
+
+
+
+
+      .card{
+        margin-left: 2%;
+        margin-right: 2%;
+        width: 100%;
+      }
+         .card img{
+          height: 180px;
+          width:100%
+
+        }
+        .card-body{
+          background-color: black;
+  font-family: 'Montserrat', sans-serif;
+font-variant: small-caps;
+color: white;
+width: 70%;
+        }
+        .img-square-wrapper{
+          width: 20%;
+        }
+  .card1{
+    /* border: 1px solid black; */
+  font-family: 'Montserrat', sans-serif;
+font-variant: small-caps;
+display: flex;
+/* justify-content: center; */
+align-items: center;
+text-align: center;
+font-size: 20px;
+padding-left: 10px ;
+padding-right: 10px;
+    width: 10%;
+  }
+  .card-horizontal {
+    display: flex;
+    width: 100%;
+    flex: 1 1 auto;
+
+}
+.featured{
+  border-bottom: 1px solid black;
+  width: 22%;
+  font-size: 25px;
+  margin-left: 3.8%;
+  font-family: 'Montserrat', sans-serif;
+
+  float: left;
+  font-weight: 500;
+  /* margin-left: 5%; */
+}
+.view{
+ margin-bottom: 20px;
+  width: 27%;
+  font-size: 20px;
+  margin-right: 3.8%;
+  font-family: 'Montserrat', sans-serif;
+
+  float:right;
+  text-align: center;
+
+
+}
+.nothing{
+  display: none;
+  width: 100%;
+  margin: 0 auto;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 20px;
+  /* border: 1px solid black; */
+  font-family: 'Montserrat', sans-serif;
+font-variant: small-caps;
+}
+    .navbar-light .navbar-nav .nav-link {
+    
+    font-size:20px;
+    margin-left: 20px;
+}
+
+/* .angled{
+  border-top: 40px solid	#020200;
+  border-right: 500px solid white;
+} */
+.txt{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 1000;
+  font-variant: small-caps;
+  font-size: 80px;
+  color:#03080c;
+  width: 100%;
+  /* height: 600px; */
+ position: absolute;
+  margin-top: 420px;
+  
+}
+.bckg{
+  text-align: center;
+    background-image:url(../images/stalwart-main.jpg);
+             width: 100%;
+             height: 600px;
+             background-repeat: no-repeat;
+             background-size: 100% 100%;
+            position: relative;
+             display: block;
+             margin: 0 auto;
+}
+.intro{
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    font-family: 'Montserrat', sans-serif;
+    /* font-family: 'Cormorant Garamond', serif; */
+    font-size: 45px;
+    font-weight:1000;
+    word-spacing: 3px;
+    font-variant: small-caps;
+    letter-spacing: 2px;
+    line-height:1.2em;
+    white-space: prewrap;
+}
+
+.item1{
+  background-image: url(../images/stalwart-pubg.png);
+ height: 300px;
+ background-repeat: no-repeat;
+ background-position: center;
+ background-size: contain;
+}
+.item2{
+  background-image: url(../images/stalwart-ffire.png);
+ height: 300px;
+ background-repeat: no-repeat;
+ background-position: center;
+ background-size: contain;
+}
+.item3{
+  background-image: url(../images/stalwart-cod.jpg);
+ height: 300px;
+ background-repeat: no-repeat;
+ background-position: center;
+ background-size: contain;
+}
+.item4{
+  background-image: url(../images/stalwart-pes.png);
+ height: 300px;
+ background-repeat: no-repeat;
+ background-position: center;
+ background-size: contain;
+}
+.item5{
+  background-image: url(../images/stalwart-gtaon.png);
+ height: 300px;
+ background-repeat: no-repeat;
+ background-position: center;
+ background-size: contain;
+}
+.item6{
+  background-image: url(https://vignette.wikia.nocookie.net/logopedia/images/1/1d/Valorant_logo.png/revision/latest?cb=20200304015651);
+  height: 300px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+/* .carousel-inner{
+  height: 300px;
+  border: 1px solid black;
+} */
+.expect{
+  width: 100%;
+  height: 250px;
+  margin-top: 20px;
+  margin-bottom: 20px;;
+  background-image: url(https://www.pixel4k.com/wp-content/uploads/2019/03/forza-horizon-3-dlc-4k_1553074755.jpg);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+.msg{
+  position: absolute;
+  font-size: 50px;
+  height: 125px;
+  width: 100%;
+ text-align: center;
+ font-weight: bold;
+ font-family: 'Abril Fatface', cursive;
+ line-height: 250px;
+ letter-spacing: 3px;
+  height: 250px;
+}
+.signup{
+box-shadow: 5px 5px 5px #888888;
+
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+  display: flex;
+  padding-left: 5%;
+  padding-right: 5%;
+  align-items: center;
+  width: 100%;
+  height: 80vh;
+  color: white;
+  background-image: linear-gradient(to right top, #e16868, #a8603f, #71532d, #454127, #282a24);
+}
+.content{
+  align-items: center;
+}
+.content h2{
+
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-variant: small-caps;
+  font-size: 70px;
+  font-weight: bolder;
+}
+.content .btn-lg{
+  font-size: 40px;
+  margin:0 auto;
+width: 30%;
+font-family: 'Montserrat', sans-serif;
+font-variant: small-caps;
+margin-left: 35%;
+margin-top: 3vh;
+height: 80px;
+}
+.content h3{
+  font-family: 'Montserrat', sans-serif;
+  font-variant: small-caps;
+  text-align: center;
+  margin-top: 30px;
+
+  font-size:35px;
+}
+.signup img{
+  float: left;
+  width: 30%;
+  height: 55vh;
+}
+   .navbar-light .navbar-brand{ 
+       font-size:25px;
+       letter-spacing: 2px;
+       font-weight: bold;
+       text-transform: uppercase;
+   }
+   .navbar-light .navbar-nav .nav-link:hover, .dropdown-item:hover {
+    color:red;
+
+   }
+   .nav-link::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: red;
+    transition: width .3s;
+}
+.dropdown-item:after{
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: red;
+  transition: width .3s;
+}
+.dropdown-item:hover::after {
+  width: 100%;
+  transition: width .3s;
+}
+.dropdown-toggle::after{
+  content: '';
+  display: block;
+  width: 0;
+  background:#EEEFED; ;
+  height: 2px;
+  transition: width .3s;
+  
+}
+.dropdown{
+  display: none;
+}
+.nav-link:hover::after {
+    width: 100%;
+    transition: width .3s;
+}
+.dropdown .nav-link:hover::after{
+  width: 0%;
+  transition: none;
+}
+   .navbar-inner{
+       background: #EEEFED;
+   }
+.navbar-brand{
+  font-family: 'Rufina', serif;
+  padding-left: 15px;
+}
+.nav-item{
+  font-family: 'Montserrat', sans-serif;
+  
+}
+
+.footer{
+  clear: both;
+  position: relative;
+}
+   .footer {
+     margin-top: 5vh;
+  background: #152F4F;
+  color: white;
+}
+.footer .links ul {
+  list-style-type: none;
+}
+.footer .links li a {
+  color: white;
+  -webkit-transition: color .2s;
+  transition: color .2s;
+}
+.footer .links li a:hover {
+  text-decoration: none;
+  color: #4180CB;
+}
+.footer .about-company i {
+  font-size: 25px;
+}
+.footer .about-company a {
+  color: white;
+  -webkit-transition: color .2s;
+  transition: color .2s;
+}
+.footer .about-company a:hover {
+  color: #4180CB;
+}
+.footer .location i {
+  font-size: 18px;
+}
+.footer .copyright p {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+::-webkit-scrollbar {
+  height: 5px;
+  width: 5px;
+    background:  white /* make scrollbar transparent */
+}
+::-webkit-scrollbar-thumb{
+  border-radius: 10px;
+  background:  grey
+}
+::-webkit-scrollbar-button{
+  background-color: white;
+}
+.fa-angle-double-right{
+  font-size: 20px;
+  
+}
+.navbar-collapse.show ul li{
+  padding-top:0px;
+  border-bottom: none;
+  box-shadow: none;
+  text-align:center;
+}
+.navbar{
+  border-bottom: 7px solid red;
+position: sticky;
+}
+.dropdown-menu{
+  margin-left:-115px;
+
+  min-width: 10rem;
+}
+.dropdown-item{
+  height: 6vh;
+}
+
+.e{
+  display:none
+}
+@media only screen and (max-width: 1000px){
+  .bckg{
+    height: 70vh;
+  }
+  .featured{
+    width: 42%;
+  }
+  .signup img{
+width: 32%;
+height: 50vh;
+  }
+  .content h2{
+    font-size: 55px;
+  }
+  }
+@media only screen and (max-width: 992px){
+  #dp1{
+    width:47px;
+    height:47px
+  }
+  .dropdown-menu{
+  margin-left: 0px;
+  }
+  .dropdown-item{
+    line-height: 32px;
+  }
+  .nav-link::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: none;
+    transition: width .3s;
+}
+.dropdown-toggle::after{
+  margin: 0 auto;
+}
+  .dropdown-item:after{
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: none;
+    transition: width .3s;
+  }
+  .navbar{
+    border-bottom: 7px solid red;
+  }
+  .navbar-collapse.show ul li{
+    margin-top:0px;
+    height: 69px;
+    line-height: 63px;
+    border-top: 1px solid red;
+    /* border-bottom: 1px solid grey; */
+    /* box-shadow: 0px 5px 5px #888888; */
+    text-align: center;
+  }
+  .signup img{
+    width: 33%;
+    height: 49vh;
+      }
+      .content h2{
+        font-size: 50px;
+      }
+      .content .btn-lg{
+        width:40%;
+        margin-left: 30%;
+
+      }
+}
+@media only screen and (max-width: 850px){
+  .about-company{
+margin-bottom: 10px;
+  }
+  .row{
+    width: 100%;
+  }
+  .signup{
+   padding-right: 1%;
+    padding-left: 1%;
+  }
+  .signup img{
+    width: 35%;
+    height: 47vh;
+      }
+      .img-square-wrapper{
+        display: block;
+        float:left;
+        width:50%;
+      }
+  .card img{
+    height: 180px;
+    width:100%;
+float: left;
+  }
+  .card-body{
+    width: 100%;
+    float: left;
+  }
+.card1{
+  height:180px;
+padding-left: 10px ;
+display: flex;
+justify-content: center;
+float: left;
+padding-right: 10px;
+width: 50%;
+}
+.card-horizontal {
+display: block;
+
+margin-left: 0%;
+margin-right: 0%;
+}
+  .links{
+margin-bottom: 10px;
+  }
+.bckg{
+  height: 60vh;
+}
+.expect{
+  width: 100%;
+  margin-top: 20px;
+  height: 200px;
+  margin-bottom: 20px;
+  background-size: cover;
+  position: relative;
+}
+.msg{
+  position: absolute;
+  font-size: 30px;
+  height: 100px;
+  width: 100%;
+ text-align: center;
+ font-weight: bold;
+ font-family: 'Abril Fatface', cursive;
+ line-height: 200px;
+ letter-spacing: 3px;
+  height: 250px;
+}
+.contair{
+  margin-left: 5%;
+  margin-right: 5%;
+  width: 40%;
+  margin-bottom: 5%;
+}
+  .intro{
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    font-size: 37px;
+    font-weight:600;
+    word-spacing: 2px;
+    letter-spacing: 2px;
+    line-height:1.2em;
+    white-space: prewrap;
+
+    font-variant: small-caps;
+}
+.item1{
+  height: 200px;
+}
+.item2{
+  height: 200px;
+}
+.item3{
+  height: 200px;
+}
+.item4{
+  height: 200px;
+}
+.item5{
+  height: 200px;
+}
+
+
+}
+@media only screen and (max-width: 750px){
+  .bckg{
+    height:47vh;
+  }
+  .content h2{
+    font-size: 40px;
+  }
+  .content h3{
+    font-size: 30px;
+  }
+  .signup{
+    display: block;
+    height: 100vh;
+    padding-left: 2%;
+    padding-right: 2%;
+  }
+  .signup img{
+    width: 56%;
+    margin-left: 20%;
+    margin-right: 20%;
+
+float: none;
+      }
+      .content h2, .content h3{
+        text-align: center;
+      }
+  .featured{
+  width: 42%;
+}
+.view{
+  width: 22%;
+}
+  .expect{
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  height: 180px;
+  background-size: cover;
+  position: relative;
+}
+.msg{
+  position: absolute;
+  font-size: 25px;
+  height: 100px;
+  width: 100%;
+ text-align: center;
+ font-weight: bold;
+ font-family: 'Abril Fatface', cursive;
+ line-height: 180px;
+ letter-spacing: 3px;
+  height: 250px;
+}
+
+  .intro{
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    font-size: 26px;
+    font-weight:600;
+    word-spacing: 2px;
+    letter-spacing: 2px;
+    line-height:1.2em;
+    white-space: prewrap;
+
+    font-variant: small-caps;
+}
+.item1{
+  height: 200px;
+}
+.item2{
+  height: 200px;
+}
+.item3{
+  height: 200px;
+}
+.item4{
+  height: 200px;
+}
+.item5{
+  height: 200px;
+}
+}

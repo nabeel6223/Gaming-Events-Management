@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/css/bootstrap.css"> 
+        <link rel="stylesheet" href="/css/stalwart.css">
+        <link rel="stylesheet" href="/css/event-page.css">
+        <link rel="stylesheet" href="/css/loading.css">
+      <link href="https://fonts.googleapis.com/css2?family=Blinker:wght@800&display=swap" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Abril+Fatface&family=Cormorant+Garamond&family=Tajawal&family=Headland+One&family=Rufina:wght@700&display=swap" rel="stylesheet">
+       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Duru+Sans&family=Josefin+Sans:wght@300&display=swap" rel="stylesheet">
+    {{!-- <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script> --}}
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+
+        <title>Event Page</title>
+    </head>
+    <link rel = "icon" href ="/images/stalwart-logo.png" type = "image/x-icon">
+<body onload="load()">
+  <div class="loading">
+    <span class="bder"></span>
+    <span class="bder"></span>
+</div>
+<nav class="navbar navbar-expand-lg navbar-light sticky-top navbar-inner">
+        <a class="navbar-brand" href="/"><img src="/images/stalwart-logo.png" width="40" height="40" alt=""> </a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon "></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link " href="/create-event">Host Events</a>
+        </li>
+        <li class="nav-item active">
+            <a class="nav-link" href="/all-events">All Events</a>
+          </li>
+          <li class="nav-item active sign-in">
+            <a class="nav-link" href="/login">Sign In <span class="e" >{{error}}</span></a>
+          </li>      
+           <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+ <img id="dp1" style="width: 30px; height:30px; border-radius:50%  " src="https://www.tenforums.com/geek/gars/images/2/types/thumb__ser.png" alt="">
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="/profile/{{id}}">My Profile</a>
+          <a class="dropdown-item" href="/profile/{{id}}/change-email/">Change Email</a>              
+          <a class="dropdown-item" href="/profile/{{id}}/change-password" >Change Password</a>
+          <a class="dropdown-item" href="#" data-toggle="modal" data-target="#exampleModal1">Log Out</a>
+        </div>
+      </li>                 
+      </ul>
+    </div>
+  </nav>
+
+    <div class="image" style="background-image: url({{poster}});">
+  <div style="display: none;" class="edit-poster">
+  <a href="#" data-toggle="modal" data-target="#exampleModal5"><i class="fas fa-camera"></i></a>
+  </div>
+
+    </div>
+    <div class="container cont1">
+    <div class="event-info" >
+
+   <div class="display-3">
+    {{event.EventName}} 
+    <span class="edit-event1"><span style="display: none;" class="edit-event3">{{edit1}}</span><span style="display: none;" class="edit-event4">{{event.id}}</span>
+    <span style="display: none;" class="delete">{{del1}}</span>
+          <a href="{{edit}}" class="edit-event2">(edit)</a>
+    </span>
+   </div> 
+    <a><i class="fas fa-gamepad"></i>{{event.Game}}<br> <br> </a>
+<a><i class="fas fa-calendar-alt"></i> {{event.Date}}</a>
+        <div class="description">
+            <div class="display-4">
+                Description </div>
+                <br>
+                <p style="white-space: pre-line"> {{event.Description}}
+                </p>
+        </div>
+    </div>
+    <div class="organiser1">
+        <div class="organiser">
+<div class="display-4">
+    Organiser Contact <br> </div> <span class="error1" style="display: none;">{{error}}</span><span class="reg1" style="display: none;">{{reg}}</span>
+    <a><i class="fas fa-user-alt"></i>{{user.name}}</a>
+    <br> <p></p>
+    <a ><i class="fas fa-envelope"></i>{{user.email}}</a> 
+<br> <p></p>
+   <a ><i class="fas fa-mobile-alt"></i>{{user.Mobile}}</a>
+
+             <div class="reg">
+               <button  type="button" id="but1" data-toggle="modal" data-target="#exampleModal2" class="btn btn-outline-success btn-primary reg1 bt-lg btn-block">Register</button>
+     </div> 
+        </div>
+<div class="reg_users" style="display: none;">
+  <div class="display-4">
+    Users Registered So far<br> </div>
+    <h3>
+      {{reg_len}}
+    </h3>
+</div>
+<form action="">
+ <button style="display: none;" type="button"  data-toggle="modal" data-target="#exampleModal6" class="btn del btn-danger  bt-lg ">Delete</button>
+</form>
+</div>
+        </div>
+  
+        <footer>
+        <div style="clear:both;"></div> 
+<div class="mt-5 pt-3 pb-1 footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-5 col-sm-12 about-company">
+        <h2>Connect With Us</h2>
+        <p class="pr-5 text-white-50">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac ante mollis quam tristique convallis </p>
+        <p><a href="#"><i class="fab fa-facebook-square mr-1"></i></a><a href="#"><i class="fab fa-linkedin"></i></a></p>
+      </div>
+      <div class="col-lg-3 col-sm-6 col-6 links">
+        <h4 class="mt-lg-0 mt-sm-3">Legal</h4>
+          <ul class="m-0 p-0">
+            <li>- <a href="#">Terms of Service</a></li>
+            <li>- <a href="#">Cancellation</a></li>
+            <li>- <a href="#">Privacy Policy</a></li>
+          </ul>
+      </div>
+      <div class="col-lg-4 col-sm-6 col-6 location">
+        <h4 class="mt-lg-0 mt-sm-4">Location</h4>
+        <p>22, Lorem ipsum dolor, consectetur adipiscing</p>
+        <p class="mb-0"><i class="fa fa-phone mr-3"></i>(541) 754-3010</p>
+        <p><i class="fa fa-envelope mr-3"></i>info@hsdf.com</p>
+      </div>
+    </div>
+    <div class="row mt-1">
+      <div class="col copyright">
+        <p class=""><small class="text-white-50">© 2020. All Rights Reserved.</small></p>
+      </div>
+    </div>
+  </div>
+  </div> 
+            </footer>
+  <div class="modal fade logout" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel1" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+
+      <div class="modal-body">
+        <form action="/user/logout" method="POST">
+               <div class="modal-footer">
+                <p> Are you sure you want to log-out?</p>
+                <br>
+                 <button type="submit" class="btn btn-outline-success ">Logout</button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+             </div>
+      </form>
+
+                </div>
+      </div>
+    </div>
+  </div>
+ <div class="modal  " id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel2" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+
+      <div class="modal-body">
+         <p>You need to sign to register in an event!</p>
+               <div class="modal-footer">
+               
+                <div>
+                <a href="/login"><button type="submit" class="btn btn-outline-success ">Sign-In</button></a> 
+               <button type="button" class="btn btn-danger" data-dismiss="modal" >Close</button>
+               </div>
+             </div>
+        </div>
+      </div>
+    </div>
+  </div>           
+<div class="modal fade" id="exampleModal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel3" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+
+      <div class="modal-body">
+         <form id="register" action="" method="POST">
+          <p> Press Confirm to register!</p>
+               <div class="modal-footer">
+                
+                <br>
+                 <button type="submit" class="btn btn-outline-success " >Confirm</button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+             </div>
+         </form>
+
+                </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="exampleModal4" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel4" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+
+      <div class="modal-body">
+        <form action="" method="POST">
+          <p>Congratulations! Your registration is successful.</p>
+               <div class="modal-footer">
+                
+                <br>
+                
+                <button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
+             </div>
+      </form>
+
+                </div>
+      </div>
+    </div>
+  </div>
+      <div class="modal fade edit-profile" id="exampleModal5" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel5" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+  
+        <div class="modal-body">
+         <form action="{{poster}}"  enctype="multipart/form-data" method="POST">
+                 <div class="modal-footer">
+                    <div class="form-group">
+      <label for="exampleFormControlFile1">Update Event Poster</label>
+      <input name= "updatefile" type="file" name="avatar" class="form-control-file" id="exampleFormControlFile1" accept="image/x-png,image/gif,image/jpeg,image/jpg" onchange="checkextension()"  required>
+    </div>  
+                   <button type="submit" class="btn btn-outline-success ">Save</button>
+                  <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+               </div>
+        </form>
+  
+                  </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="exampleModal6" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel6" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+
+      <div class="modal-body">
+         <form id="delete" action="{{del}}" method="POST">
+          <p> Are you sure you want to delete this event?</p>
+               <div class="modal-footer">
+                
+                <br>
+                 <button type="submit" class="btn btn-outline-success " >Yes</button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+             </div>
+         </form>
+
+                </div>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="/js/loading.js"></script>
+<script src="/js/event-page.js"></script>
+</html>

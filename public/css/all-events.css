@@ -1,0 +1,236 @@
+* { padding: 0; margin: 0; }
+html, body, #fullheight {
+    
+    height: 100%;
+    margin:0px; padding: 0;
+    overflow-x: hidden;
+
+}
+::-webkit-scrollbar {
+    width: 10px;
+    background:  white /* make scrollbar transparent */
+}
+::-webkit-scrollbar-thumb{
+  border-radius: 10px;
+  background:  grey
+}
+::-webkit-scrollbar-button{
+  background-color: white;
+}
+body{
+    width: 100%;
+    /* position: absolute; */
+}
+
+      .display-4{
+        font-family: 'Montserrat', sans-serif;
+    font-size: 40px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin-bottom: 5vh;
+    margin-top: 2%;
+    font-variant: small-caps;
+    letter-spacing: 4px;
+    margin-left: 2.5%;
+    font-variant: small-caps;
+    /* border-bottom: 3px solid black; */
+      }
+      .row{
+        height: 100%;
+        margin-top: 5px;
+        padding: 2.5% 2.5%;
+        width: 100%;
+        align-items: center;
+    }
+.container{
+  width: 100%;
+  margin-top: 5vh;
+}
+#container1{
+  margin-top: 10vh;
+}
+    .card{
+      padding-top: 3px;
+      padding-bottom: 3px;
+      margin-bottom: 3vh;
+      display: block;
+      width: 45%;
+      float: left;
+      margin-left: 2.5%;
+      margin-right: 2.5%;
+      height: 300px;
+      color: white;
+      background:white;
+      box-shadow: 5px 5px 15px rgba(44, 39, 39, 0.5);
+      border-radius: 10px;
+    }
+
+.card .product {
+  background-color: black;
+  padding-top: 3vh;
+  font-family: 'Montserrat', sans-serif;
+font-variant: small-caps;
+width: 37%;
+padding-left: 3%;
+height: 100%;
+  font-size: 10px;
+  float: right;
+}
+.card .product h1{
+  font-size: 25px;
+font-weight: 600;
+}
+.card .product p{
+  font-size: 14px;
+  margin-top: 25px;
+
+}
+.card .product h2{
+  font-size: 15px;
+
+}
+
+    .card img {
+      float: left;
+      width: 60%;
+      height: 200px;
+      margin-top: 47px;
+      margin-bottom: 47px;
+    }
+    .card button {
+      background: #717cdf;
+      padding: 10px;
+      border-radius: 2px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: red;
+      cursor: pointer;
+    }
+    .card button:hover {
+      background: rgb(224, 213, 213);
+      transition: all .4s ease-in-out;
+    }
+.buttons a{
+  color:black;
+}
+
+
+
+
+
+.cont1{
+  height: 60vh;
+  color: white;
+  background-image: linear-gradient(to right top, #c8b3bf, #ac989a, #8c7f7b, #6c6762, #4f4f4d);
+}
+#carouselContent{
+  height: 60vh;
+  display: flex;
+  padding-left: 20%;
+  padding-right: 20%;
+  align-items: center;
+  font-size: 20px;
+  justify-content: center;
+  font-variant: small-caps;
+  font-family: 'Montserrat', sans-serif;
+ font-weight: 300;
+}
+.auth, .auth1{
+text-align: center;
+
+}
+.carousel-item p{
+  margin-bottom: 40px;
+}
+.brdr{
+  margin: 0 auto;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  width: 10%;
+  border: 3px solid #2471A3;
+}
+.carousel-control-prev-icon{
+  background-image: none;
+}
+.carousel-control-next-icon{
+  background-image: none;
+}
+.carousel-control-next-icon:after
+{
+  content: '>';
+  font-size: 50px;
+  color: #2471A3;
+}
+.carousel-control-prev-icon:after
+{
+  content: '<';
+  font-size: 50px;
+  color: #2471A3;
+}
+
+.fas{
+  font-size: 40px;
+  margin-bottom: 5vh;
+}
+.carousel-item.active,
+.carousel-item-next,
+.carousel-item-prev{
+    display:block;
+}
+.fas{
+  font-size: 15px;
+}
+.home{
+  font-family: 'Montserrat', sans-serif;
+font-size: 20px;
+font-variant: small-caps;
+padding-right: 2.5%;
+  text-align: right;
+  padding-top: 20px;
+}
+.pages {
+  margin-top: 3%;
+  text-align: center;
+}
+.pages a{
+  margin-left: 10px;
+  margin-right: 10px;
+}
+@media only screen and (max-width: 992px){
+.card{
+  width: 70%;
+  margin-left: 15%;
+  float: none;
+}
+}
+@media only screen and (max-width: 850px){
+  .card{
+    width: 80%;
+    margin-left: 10%;
+    float: none;
+  
+  }
+}
+@media only screen and (max-width: 750px){
+  .fas{
+    font-size: 25px;
+  }
+  .cont1{
+    height: 70vh;
+  }
+  #carouselContent{
+    font-size: 17px;
+    padding-top: 20vh;
+  }
+    .display-4{
+      margin-top: 5vh;
+      width: 50%;
+      font-size: 30px;
+    }
+
+    .card{
+      margin-left: 5%;
+      margin-right: 5%;
+      width: 90%;
+    }
+}

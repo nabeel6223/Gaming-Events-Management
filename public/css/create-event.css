@@ -1,0 +1,149 @@
+* { padding: 0; margin: 0; }
+html, body, #fullheight {
+    
+    height: 100%;
+    margin:0px; padding: 0;
+}
+body{
+    width: 100%;
+    /* position: absolute; */
+}
+        .imag{
+            background-image: url(../images/create-event-side.jpg); 
+             background-repeat: no-repeat;
+             background-size: 100% 100%;
+            height: 100%;
+            width: 40%;
+            position: fixed;
+            float: left;
+        }
+        .main{
+            padding: 2% 3%;
+            width: 60%;
+            height: 100%;
+            float: right;
+            display: block;
+        }
+        .form-control-file{
+    font-family: 'Josefin', sans-serif;
+
+        }
+ .display-4{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 40px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin-bottom: 5vh;
+    width: 65%;
+    font-variant: small-caps;
+    border-bottom: 1px solid black;
+ }
+ .display-5{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    margin-bottom: 5vh;
+    width: 55%;
+    margin-top: 5vh;
+    font-variant: small-caps;
+ }
+ label{
+    
+    font-size: 20px;
+    letter-spacing: 2px;
+    font-weight: 100;
+ }
+ .form-control{
+     
+    border-top-style: hidden;
+  border-right-style: hidden;
+  border-left-style: hidden;
+  border-bottom-style: solid;
+  background-color :white;
+ }
+ .form-control:focus{
+     box-shadow: none !important;
+     background-color: beige;
+ }
+ input{
+     padding: 3px;
+ }
+ .form-group, .form-check{
+     margin-bottom: 5vh;
+ }
+ ::-webkit-scrollbar {
+    width: 10px;
+    background:  white /* make scrollbar transparent */
+}
+::-webkit-scrollbar-thumb{
+  border-radius: 10px;
+  background:  grey
+}
+::-webkit-scrollbar-button{
+  background-color: white;
+}
+.btn-block{
+    margin: 0 auto;
+    width: 50%;
+    margin-top: 10%;
+    margin-bottom: 5%;
+}
+.home{
+    font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  font-variant: small-caps;
+  
+    text-align: right;
+    margin-bottom: 10px;
+}
+.e{
+    display: none;
+}
+@media only screen and (max-width: 1100px){
+    .imag{
+        width: 50%;
+    
+    }
+    .main{
+        width: 50%;
+    }
+    .display-4{
+        width: 80%;
+    }
+    .display-5{
+        width: 100%;
+    }
+    @media only screen and (max-width: 850px){
+        .display-4{
+            font-size: 30px;
+        }
+    }
+@media only screen and (max-width: 750px){
+    .imag{
+        display: none;
+        
+    }
+    .main{
+        width: 100%;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    .mob-image{
+        height: 40%;
+        background-image: url(../images/create-event-side-mob.jpg);
+        background-repeat: no-repeat;
+             background-size: 100% 100%;
+             margin-bottom: 5vh;
+    }
+    .display-4{
+        width: 80%;
+        font-size: 40px;
+    }
+    .display-5{
+        width: 70%;
+        font-size: 25px;
+    }
+}
+
+}

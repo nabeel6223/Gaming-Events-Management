@@ -1,0 +1,145 @@
+* { padding: 0; margin: 0; }
+html, body, #fullheight {
+    
+    height: 100%;
+    margin:0px; padding: 0;
+}
+body{
+    width: 100%;
+    /* position: absolute; */
+}
+::-webkit-scrollbar {
+    width: 10px;
+    background:  white /* make scrollbar transparent */
+}
+::-webkit-scrollbar-thumb{
+  border-radius: 10px;
+  background:  grey
+}
+::-webkit-scrollbar-button{
+  background-color: white;
+}
+        .imag{
+            background-image: url(../images/login-side.jpg); 
+             background-repeat: no-repeat;
+             background-size: 100% 100%;
+            height: 100%;
+            width: 75%;
+            margin-left: -8%;
+            position: fixed;
+            float: left;
+        }
+        
+        .main{
+            width: 33%;
+            background: #17202A;
+            /* margin-top: 5vh; */
+            height: 100%;
+            /* border: 1px solid white; */
+            /* box-shadow: 5px 5px 85px grey; */
+            /* margin-right: 15%; */
+            /* position: relative; */
+            float: right;
+            color: white;
+            /* background-color: white; */
+            /* opacity: 0.9; */
+            padding: 2% 2%;
+            padding-top: 12vh;
+            
+        }
+        .wel{
+               text-align: center;
+               margin-bottom: 10%;
+        }
+        .but{
+            margin-top: 5vh;
+            display: flex;
+  justify-content: center;
+  align-items: center;
+        }
+        input{
+            margin-top: 1vh;
+        }
+        label{
+            margin-top: 2vh;
+        }
+        @viewport{
+            zoom: 1.0;
+            width: extend-to-zoom;
+        }
+        .error{
+            font-size: 17px;
+        }
+        .try{
+            width:100%; text-align:center;
+        }
+        .fa-exclamation-circle{
+font-size: 17px;
+        }
+        .home{
+            font-family: 'Montserrat', sans-serif;
+          font-size: 20px;
+          font-variant: small-caps;
+          
+            text-align: right;
+            margin-bottom: 10px;
+        }
+        @media only screen and (max-width: 1000px){
+
+            .imag{
+                background-size: 110% 100%;
+                margin-left: -15%;
+                width: 80%;
+            }
+            .main{
+                width: 35%;
+            }
+
+        }
+        @media only screen and (max-width: 850px){
+
+            .imag{
+                background-size: 100% 100%;
+                margin-left: -45%;
+                width: 100%;
+            }
+            .main{
+                width: 45%;
+            }
+
+        }
+        @media only screen and (max-width: 750px){
+            
+            .mob-image{
+        height: 45%;
+        background-image: url(../images/login-side-mob.jpg);
+        background-repeat: no-repeat;
+             background-size: 100% 100%;
+             
+    }
+    
+            .imag{
+                display: none;
+                margin-left: -10%;
+ 
+
+            }
+            .main{
+            width: 100%;
+            background: #444444;
+           
+            height: 100%;
+            
+            box-shadow: 5px 5px 85px ;
+            
+            position: relative;
+           
+            color: white;
+          
+             /* opacity: 0.9;  */
+            padding: 2% 2%;
+            padding-top: 12vh;
+            padding-right: 5%;
+            padding-left: 5%;
+            }
+        }
